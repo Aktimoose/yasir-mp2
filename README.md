@@ -1,7 +1,7 @@
 # yasir-mp2
 the most Garbage code of all time
 
-this is ivsual visual basic idk what version
+this is ivsual visual basic idk what version also it seems that the newlines on the requirements i'm putting below aren't working
 
 
 Coffee Shop Checklist for MAP2 GUI
