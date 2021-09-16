@@ -1,0 +1,11 @@
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\bin\Debug\WindowsApplication2.exe.config
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\bin\Debug\WindowsApplication2.exe
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\bin\Debug\WindowsApplication2.pdb
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\bin\Debug\WindowsApplication2.xml
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\obj\Debug\WindowsApplication2.vbprojResolveAssemblyReference.cache
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\obj\Debug\WindowsApplication2.Resources.resources
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\obj\Debug\WindowsApplication2.vbproj.GenerateResource.Cache
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\obj\Debug\WindowsApplication2.exe
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\obj\Debug\WindowsApplication2.xml
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\obj\Debug\WindowsApplication2.pdb
+\\VS-FSSD-02\StudentHomes\Y33745\Documents\Visual Studio 2015\Projects\coffeeShopGUI\WindowsApplication2\obj\Debug\WindowsApplication2.coffeeShop.resources
