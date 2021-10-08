@@ -6,9 +6,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{D5FD309B-0CC0-4B30-8C42-BEB3AD4A5F32}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>WindowsApplication2.My.MyApplication</StartupObject>
-    <RootNamespace>WindowsApplication2</RootNamespace>
-    <AssemblyName>WindowsApplication2</AssemblyName>
+    <StartupObject>coffeeShop.My.MyApplication</StartupObject>
+    <RootNamespace>coffeeShop</RootNamespace>
+    <AssemblyName>coffeeShop</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -36,7 +36,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>WindowsApplication2.xml</DocumentationFile>
+    <DocumentationFile>coffeeShop.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -46,7 +46,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>WindowsApplication2.xml</DocumentationFile>
+    <DocumentationFile>coffeeShop.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -90,6 +90,30 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="endConfirmation.Designer.vb">
+      <DependentUpon>endConfirmation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="endConfirmation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="theEnd.Designer.vb">
+      <DependentUpon>theEnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="theEnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ordering.Designer.vb">
+      <DependentUpon>Ordering.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ordering.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="password.Designer.vb">
+      <DependentUpon>password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="password.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Order.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +146,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="endConfirmation.resx">
+      <DependentUpon>endConfirmation.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Order.resx">
       <DependentUpon>Order.vb</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +160,15 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordering.resx">
+      <DependentUpon>Ordering.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="password.resx">
+      <DependentUpon>password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="theEnd.resx">
+      <DependentUpon>theEnd.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

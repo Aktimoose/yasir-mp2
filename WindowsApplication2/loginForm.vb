@@ -1,6 +1,4 @@
 Public Class loginForm
-    Dim colorChoice As Integer
-    Dim invalidColor As Color
     Dim honorificValidation As Boolean
     Dim forenameValidation As Boolean
     Dim surnameValidation As Boolean
@@ -10,22 +8,8 @@ Public Class loginForm
     Dim months30 As String() = {"April", "June", "September", "November"} 'Creates an array of all the months that have 30 days
     Dim month30 As Boolean
     Dim month29 As Boolean
-    Private Sub loginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load 'Sets the colour that appears when you enter an invalid
-        Randomize() 'Resets the random seed so that the next result is different every time
-        colorChoice = (Mid$((Int((6 * Rnd()) + 1)), 1, 1)) 'Picks a number from 1-6
-        If colorChoice = 6 Then
-            colorChoice = (Mid$((Int((6 * Rnd()) + 1)), 1, 1))
-            If colorChoice = 6 Then
-                colorChoice = (Mid$((Int((6 * Rnd()) + 1)), 1, 1))
-                If colorChoice = 6 Then
-                    invalidColor = Color.Red 'Pure red gets chosen if the random number generator gets 3 6s in a row (1/216 chance)
-                End If
-            End If
-        ElseIf Not (colorChoice = 5) Then
-            invalidColor = Color.FromArgb(255, 255, 73, 73)
-        Else
-            invalidColor = Color.FromArgb(255, 244, 63, 72)
-        End If
+    Private Sub loginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        password.Close()
     End Sub
     Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles Cancel.Click
         Me.Close() 'Closes the program if you click Cancel
@@ -61,6 +45,8 @@ Public Class loginForm
             monthOfBirth = "0" & monthOfBirth
         End If
 
+        orderCount = 0
+
         If validation = True Then
             coffeeShop.Show()
         End If
@@ -72,11 +58,11 @@ Public Class loginForm
     End Sub
     Private Sub txtForename_TextChanged(sender As Object, e As EventArgs) Handles txtForename.TextChanged
         If Len(txtForename.Text) < 1 Then 'Checks to see if a forename was typed in
-            txtForename.BackColor = invalidColor
-        ElseIf Len(txtForename.Text) > 20 Then 'Checks to see if the forename is too long
+            txtForename.BackColor = invalidColor 'Sets the text box to red if it's found to not be typed in
+        ElseIf Len(txtForename.Text) > 20 Then 'Checks to see if the forename is above 20 characters
             txtForename.BackColor = invalidColor
         Else
-            txtForename.BackColor = Color.White
+            txtForename.BackColor = Color.White 'Sets the text box to white if it's valid
             forenameValidation = True
             forename = txtForename.Text
         End If
@@ -92,6 +78,7 @@ Public Class loginForm
             surname = txtSurname.Text
         End If
     End Sub
+    'The month of birth combo box decides what values are in the day of birth combo box
     Private Sub cmbMonthOfBirth_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMonthOfBirth.SelectedIndexChanged
         monthOfBirthValidation = True
         cmbMonthOfBirth.BackColor = Color.White
@@ -102,9 +89,9 @@ Public Class loginForm
         month29 = False
         For Each month As String In months30
             If cmbMonthOfBirth.SelectedItem = month Then 'Checks to see if the month chosen is within the array "months30"
-                month30 = True
-            ElseIf cmbMonthOfBirth.SelectedItem = "February" Then
-                month29 = True
+                month30 = True 'If the month is within the array, then month30 is set to true
+            ElseIf cmbMonthOfBirth.SelectedItem = "February" Then 'Checks to see if the month chosen is "February"
+                month29 = True 'If the month is within the array, then month29 is set to true
             End If
         Next
         If month30 = True Or month29 = True Then
@@ -127,5 +114,19 @@ Public Class loginForm
         dayOfBirthValidation = True
         cmbDayOfBirth.BackColor = Color.White
         dayOfBirth = cmbDayOfBirth.SelectedItem
+    End Sub
+    Private Sub imgLogoBG_Click(sender As Object, e As EventArgs) Handles imgLogoBG.Click
+        Try
+            Shell("C:\Program Files\Google\Chrome\Application\chrome.exe -url https:/crouton.net") 'Opens the website "crouton.net" in Google Chrome if it is in the filepath specified
+        Catch FileNotFound As Exception
+            MsgBox("https://crouton.net") 'Shows the user crouton.net if the filepath for Google Chrome does not work
+        End Try
+    End Sub
+    Private Sub loginForm_SizeChanged(sender As Object, e As EventArgs) Handles Me.SizeChanged
+        If Me.Width < 150 And Me.Height < 40 Then 'Checks if the user shrinks the program to the smallest it possibly can (this probably breaks on different screen resolutions)
+            MsgBox("ow")
+            Me.Width = 465
+            Me.Height = 407
+        End If
     End Sub
 End Class

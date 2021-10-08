@@ -44,6 +44,7 @@ Partial Class loginForm
         Me.imgLogoText = New System.Windows.Forms.PictureBox()
         Me.cmbDayOfBirth = New System.Windows.Forms.ComboBox()
         Me.cmbMonthOfBirth = New System.Windows.Forms.ComboBox()
+        Me.lblPasswordTitle = New System.Windows.Forms.Label()
         CType(Me.imgLogoBG, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.imgLogoText, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -94,6 +95,8 @@ Partial Class loginForm
         '
         'OK
         '
+        Me.OK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.OK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.OK.Location = New System.Drawing.Point(246, 318)
         Me.OK.Name = "OK"
         Me.OK.Size = New System.Drawing.Size(94, 23)
@@ -103,6 +106,7 @@ Partial Class loginForm
         'Cancel
         '
         Me.Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Cancel.Location = New System.Drawing.Point(349, 318)
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(94, 23)
@@ -172,7 +176,7 @@ Partial Class loginForm
         Me.cmbDayOfBirth.ForeColor = System.Drawing.SystemColors.WindowText
         Me.cmbDayOfBirth.FormattingEnabled = True
         Me.cmbDayOfBirth.IntegralHeight = False
-        Me.cmbDayOfBirth.Items.AddRange(New Object() {"1", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "2", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "3", "30", "31", "4", "5", "6", "7", "8", "9"})
+        Me.cmbDayOfBirth.Items.AddRange(New Object() {"1", "2", "3", "3", "2", "1", "3"})
         Me.cmbDayOfBirth.Location = New System.Drawing.Point(223, 274)
         Me.cmbDayOfBirth.Name = "cmbDayOfBirth"
         Me.cmbDayOfBirth.Size = New System.Drawing.Size(220, 21)
@@ -193,6 +197,16 @@ Partial Class loginForm
         Me.cmbMonthOfBirth.Size = New System.Drawing.Size(220, 21)
         Me.cmbMonthOfBirth.TabIndex = 4
         '
+        'lblPasswordTitle
+        '
+        Me.lblPasswordTitle.AutoSize = True
+        Me.lblPasswordTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 50.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPasswordTitle.Location = New System.Drawing.Point(703, 523)
+        Me.lblPasswordTitle.Name = "lblPasswordTitle"
+        Me.lblPasswordTitle.Size = New System.Drawing.Size(143, 76)
+        Me.lblPasswordTitle.TabIndex = 12
+        Me.lblPasswordTitle.Text = "real"
+        '
         'loginForm
         '
         Me.AcceptButton = Me.OK
@@ -200,7 +214,8 @@ Partial Class loginForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Linen
         Me.CancelButton = Me.Cancel
-        Me.ClientSize = New System.Drawing.Size(449, 368)
+        Me.ClientSize = New System.Drawing.Size(459, 364)
+        Me.Controls.Add(Me.lblPasswordTitle)
         Me.Controls.Add(Me.cmbMonthOfBirth)
         Me.Controls.Add(Me.cmbDayOfBirth)
         Me.Controls.Add(Me.imgLogoText)
@@ -215,13 +230,13 @@ Partial Class loginForm
         Me.Controls.Add(Me.lblSurname)
         Me.Controls.Add(Me.lblForename)
         Me.Controls.Add(Me.imgLogoBG)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "loginForm"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
-        Me.Text = "Login Form"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "wow there's a gif on this page"
         CType(Me.imgLogoBG, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.imgLogoText, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -236,4 +251,5 @@ Partial Class loginForm
     Friend WithEvents imgLogoBG As PictureBox
     Friend WithEvents cmbDayOfBirth As ComboBox
     Friend WithEvents cmbMonthOfBirth As ComboBox
+    Friend WithEvents lblPasswordTitle As Label
 End Class
