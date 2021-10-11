@@ -9,25 +9,30 @@
 
 		'Populates the form with the details captured in the arrays of items
 		For Each product As Control In grpProducts.Controls
-			product.Text = products(product.TabIndex)
+			product.Text = products(0, product.TabIndex)
 		Next
 
 		For Each price As Control In grpPrices.Controls
-			price.Text = "£" & productPrices(price.TabIndex)
+			price.Text = "£" & products(1, price.TabIndex)
 		Next
 
 		For Each desc As Control In grpDescs.Controls
-			desc.Text = productDescs(desc.TabIndex)
+			desc.Text = products(2, desc.TabIndex)
 		Next
 
 		For Each id As Control In grpIDs.Controls
-			id.Text = productIDs(id.TabIndex)
+			id.Text = products(3, id.TabIndex)
 		Next
 
 		receipt = ""
 		'Checks any previous debt from previous orders
 		If debt > 0 Then
-			payment = InputBox("you still haven't paid back your debt. how much money do you want to give to clear it? (no i won't tell you how much your debt is)")
+			Try
+				payment = InputBox("you still haven't paid back your debt. how much money do you want to give to clear it? (no i won't tell you how much your debt is)")
+			Catch FormatException As Exception 'If the input the user put in was not a number, it will catch the error and just take it as 0
+				MsgBox("i'll take that as nothing...")
+				payment = 0
+			End Try
 			If payment < debt Then
 				MsgBox("go away")
 				Me.Close()

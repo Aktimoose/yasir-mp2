@@ -1,7 +1,7 @@
 ﻿Public Class Ordering
     Private Sub Ordering_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         coffeeShop.Enabled = False 'Makes the user unable to interact with the original coffee shop form before finishing this order
-        lblItem.Text = "Item: " & products(productOrder)
+        lblItem.Text = "Item: " & products(0, productOrder)
         'If the product order is Hot Chocolate, it will make the group box that handles extras like Whipped Cream visible, and extend the width of the form
         If productOrder = 2 Then
             grpExtras.Visible = True
@@ -20,7 +20,7 @@
         Dim productLine As String
         Dim productTotal As Single
         Dim extras As String = ""
-        productsQuantity(productOrder) = numAmount.Value
+        products(4, productOrder) = numAmount.Value
 
         Select Case radIcedYes.Checked
             Case True
@@ -37,14 +37,14 @@
 
         Select Case chkWhippedCream.Checked
             Case True
-                productTotal = (productsQuantity(productOrder) * productPrices(productOrder)) + (productsQuantity(productOrder) * 0.2) 'If the user has asked for whipped cream, the price of the hot chocolate is added to the total as well as the price of the whipped cream.
+                productTotal = (products(4, productOrder) * products(1, productOrder)) + (products(4, productOrder) * 0.2) 'If the user has asked for whipped cream, the price of the hot chocolate is added to the total as well as the price of the whipped cream.
                 extras = extras + " (with whipped cream)" 'Adds the whipped cream to the extras section of the order line
             Case False
-                productTotal = productsQuantity(productOrder) * productPrices(productOrder) 'Without whipped cream, the price of the hot chocolate stays the same
+                productTotal = products(4, productOrder) * products(1, productOrder) 'Without whipped cream, the price of the hot chocolate stays the same
         End Select
 
         total += productTotal
-        productLine = productsQuantity(productOrder) & " " & products(productOrder) & "(s)" & extras & ": £" & productTotal 'Creates the line of the receipt that contains this item order
+        productLine = products(4, productOrder) & " " & products(0, productOrder) & "(s)" & extras & ": £" & productTotal 'Creates the line of the receipt that contains this item order
         receipt += vbNewLine & productLine
         coffeeShop.lstReceipt.Items.Add(productLine) 'Displays this order line on the main coffee shop form
         grandTotal = Math.Round(total, 2) 'Makes the grand total the total rounded to 2 decimal places
@@ -52,5 +52,10 @@
         coffeeShop.btnPay.Text = "Pay £" & Math.Round((grandTotal + VATtotal), 2) 'Shows the price on the pay button
         coffeeShop.Enabled = True 'Allows the user to interact with the coffee shop form again
         Me.Close()
+    End Sub
+
+    Private Sub lblBepis_Click(sender As Object, e As EventArgs) Handles lblBepis.Click
+        MsgBox("You've unlocked: pipis")
+        numAmount.Minimum = -6666
     End Sub
 End Class

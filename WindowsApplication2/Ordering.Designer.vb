@@ -22,6 +22,7 @@ Partial Class Ordering
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim imgLogoBG As System.Windows.Forms.PictureBox
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ordering))
         Me.radSip = New System.Windows.Forms.RadioButton()
         Me.grpCup = New System.Windows.Forms.GroupBox()
@@ -35,11 +36,14 @@ Partial Class Ordering
         Me.grpExtras = New System.Windows.Forms.GroupBox()
         Me.chkWhippedCream = New System.Windows.Forms.CheckBox()
         Me.btnOk = New System.Windows.Forms.Button()
+        Me.lblBepis = New System.Windows.Forms.Label()
+        imgLogoBG = New System.Windows.Forms.PictureBox()
         Me.grpCup.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.numAmount, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpExtras.SuspendLayout()
+        CType(imgLogoBG, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'radSip
@@ -61,7 +65,7 @@ Partial Class Ordering
         Me.grpCup.Location = New System.Drawing.Point(276, 71)
         Me.grpCup.Name = "grpCup"
         Me.grpCup.Size = New System.Drawing.Size(160, 131)
-        Me.grpCup.TabIndex = 1
+        Me.grpCup.TabIndex = 2
         Me.grpCup.TabStop = False
         Me.grpCup.Text = "Type of Cup"
         '
@@ -83,7 +87,7 @@ Partial Class Ordering
         Me.GroupBox1.Location = New System.Drawing.Point(145, 71)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(125, 131)
-        Me.GroupBox1.TabIndex = 2
+        Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Iced"
         '
@@ -117,7 +121,7 @@ Partial Class Ordering
         Me.GroupBox2.Location = New System.Drawing.Point(14, 71)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(125, 131)
-        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Amount"
         '
@@ -147,7 +151,7 @@ Partial Class Ordering
         Me.grpExtras.Location = New System.Drawing.Point(442, 71)
         Me.grpExtras.Name = "grpExtras"
         Me.grpExtras.Size = New System.Drawing.Size(111, 131)
-        Me.grpExtras.TabIndex = 2
+        Me.grpExtras.TabIndex = 3
         Me.grpExtras.TabStop = False
         Me.grpExtras.Text = "Extras"
         '
@@ -169,18 +173,44 @@ Partial Class Ordering
         Me.btnOk.Location = New System.Drawing.Point(12, 208)
         Me.btnOk.Name = "btnOk"
         Me.btnOk.Size = New System.Drawing.Size(539, 50)
-        Me.btnOk.TabIndex = 5
+        Me.btnOk.TabIndex = 4
         Me.btnOk.Text = "o           k"
         Me.btnOk.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnOk.UseVisualStyleBackColor = False
+        '
+        'lblBepis
+        '
+        Me.lblBepis.AutoSize = True
+        Me.lblBepis.BackColor = System.Drawing.Color.Transparent
+        Me.lblBepis.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBepis.ForeColor = System.Drawing.SystemColors.ButtonFace
+        Me.lblBepis.Location = New System.Drawing.Point(933, 99)
+        Me.lblBepis.Name = "lblBepis"
+        Me.lblBepis.Size = New System.Drawing.Size(317, 663)
+        Me.lblBepis.TabIndex = 5
+        Me.lblBepis.Text = "you know what i" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "HATE?" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "that's" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "      bepis" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "THE TASTE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    the smell" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "    " &
+    "    the texture" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "hey...." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "         your" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "           drooling......"
+        '
+        'imgLogoBG
+        '
+        imgLogoBG.Cursor = System.Windows.Forms.Cursors.Arrow
+        imgLogoBG.Image = CType(resources.GetObject("imgLogoBG.Image"), System.Drawing.Image)
+        imgLogoBG.Location = New System.Drawing.Point(1077, 146)
+        imgLogoBG.Name = "imgLogoBG"
+        imgLogoBG.Size = New System.Drawing.Size(296, 144)
+        imgLogoBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        imgLogoBG.TabIndex = 6
+        imgLogoBG.TabStop = False
         '
         'Ordering
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(565, 282)
+        Me.ClientSize = New System.Drawing.Size(565, 273)
         Me.ControlBox = False
+        Me.Controls.Add(imgLogoBG)
+        Me.Controls.Add(Me.lblBepis)
         Me.Controls.Add(Me.btnOk)
         Me.Controls.Add(Me.grpExtras)
         Me.Controls.Add(Me.lblItem)
@@ -191,6 +221,7 @@ Partial Class Ordering
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Ordering"
+        Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "beep boop order calculation"
         Me.TopMost = True
@@ -202,6 +233,7 @@ Partial Class Ordering
         CType(Me.numAmount, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpExtras.ResumeLayout(False)
         Me.grpExtras.PerformLayout()
+        CType(imgLogoBG, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -218,4 +250,5 @@ Partial Class Ordering
     Friend WithEvents numAmount As NumericUpDown
     Friend WithEvents btnOk As Button
     Friend WithEvents radSip As RadioButton
+    Friend WithEvents lblBepis As Label
 End Class

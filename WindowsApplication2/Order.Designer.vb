@@ -384,6 +384,7 @@ Partial Class coffeeShop
         Me.lstReceipt.Name = "lstReceipt"
         Me.lstReceipt.Size = New System.Drawing.Size(407, 374)
         Me.lstReceipt.TabIndex = 2233235
+        Me.lstReceipt.TabStop = False
         Me.lstReceipt.TileSize = New System.Drawing.Size(1, 1)
         Me.lstReceipt.UseCompatibleStateImageBehavior = False
         Me.lstReceipt.View = System.Windows.Forms.View.Details
@@ -402,6 +403,7 @@ Partial Class coffeeShop
         Me.lblOrderLines.ReadOnly = True
         Me.lblOrderLines.Size = New System.Drawing.Size(407, 26)
         Me.lblOrderLines.TabIndex = 2233238
+        Me.lblOrderLines.TabStop = False
         Me.lblOrderLines.Text = "Order Lines"
         Me.lblOrderLines.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
